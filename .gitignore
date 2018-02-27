@@ -1,0 +1,33 @@
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# Eclipse project settings
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.project
+
+# Intellij
+.idea/
+*.iml
+out/
+.db
+
+#gradle
+.gradle
+build/
+
+# Mac OS X
+.DS_Store
+
+#Highscores
+stats.properties

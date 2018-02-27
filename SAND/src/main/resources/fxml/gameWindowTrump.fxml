@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.TextFlow?>
+<?import java.lang.Double?>
+<BorderPane fx:id="pane" stylesheets="@/style/gameStyleSheet.css" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.unibas.dmi.cs108.sand.gui.GameControllerTrump">
+    <fx:define>
+        <Double fx:id="btLayout1" fx:value="330"/>
+        <Double fx:id="btLayout2" fx:value="250"/>
+        <Double fx:id="chat" fx:value="350"/>
+        <Double fx:id="ButtonYValue" fx:value="690"/>
+    </fx:define>
+    <center>
+        <Pane >
+
+         <children>
+             <ImageView layoutX="150.0" layoutY="40.0">
+                 <Image url="/img/Map5.1.png" requestedHeight="650" requestedWidth="1200" />
+             </ImageView>
+             <ImageView layoutX="25" layoutY="50">
+                 <Image url="/img/Schild.png" requestedWidth="100" requestedHeight="70"/>
+             </ImageView>
+             <TextFlow textAlignment="CENTER" fx:id="money" layoutX="25" layoutY="55" prefWidth="100" prefHeight="100"/>
+
+             <Button fx:id="bt1" styleClass="gameButton" layoutX="$btLayout1" layoutY="40.0" mnemonicParsing="false" onAction="#buttonLeft11" prefHeight="100" prefWidth="100"  />
+             <Button fx:id="bt2" styleClass="gameButton" layoutX="$btLayout1" layoutY="150.0" prefHeight="100" prefWidth="100" onAction="#buttonLeft12"/>
+             <Button fx:id="bt3" styleClass="gameButton" layoutX="$btLayout1" layoutY="260.0" prefHeight="100" prefWidth="100" onAction="#buttonLeft13"/>
+             <Button fx:id="bt4" styleClass="gameButton" layoutX="$btLayout1" layoutY="370.0" prefHeight="100" prefWidth="100" onAction="#buttonLeft14"/>
+             <Button fx:id="bt5" styleClass="gameButton" layoutX="$btLayout1" layoutY="480.0" prefHeight="100" prefWidth="100" onAction="#buttonLeft15"/>
+             <Button fx:id="bt6" styleClass="gameButton" layoutX="$btLayout1" layoutY="590.0" prefHeight="100" prefWidth="100" onAction="#buttonLeft16"/>
+
+             <!-- In-Game Chat and Character chooser -->
+             <ScrollPane layoutX="$chat" layoutY="$ButtonYValue" prefHeight="155.0" prefWidth="250.0">
+                 <TextFlow fx:id="chatMessages" prefHeight="155.0" prefWidth="250.0">
+                     <padding>
+                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                 </TextFlow>
+             </ScrollPane>
+
+             <TextField fx:id="messageTextField" onAction="#hitEnter" prefHeight="25.0" prefWidth="250.0" layoutX="$chat" layoutY="850"/>
+             <!--<Button onAction="#send" prefWidth="100.0" text="Send" layoutX="1610" layoutY="210"  />-->
+             <Hyperlink onAction="#link" text="www.trumpeltiervssombreros.ch" layoutX="$chat" layoutY="880" />
+
+            <BorderPane onMouseClicked="#bull" fx:id="bullBtn" BorderPane.alignment="CENTER" styleClass="wrapper" layoutX="700" layoutY="$ButtonYValue" minWidth="140" minHeight="130">
+                <center>
+                    <ImageView >
+                        <Image url="/img/CharacterButtons/Bull.png" requestedHeight="100" requestedWidth="120" />
+                    </ImageView>
+                </center>
+            </BorderPane>
+
+            <BorderPane onMouseClicked="#trump" fx:id="trumpBtn"  styleClass="wrapper" layoutX="900" layoutY="$ButtonYValue" minWidth="140" minHeight="130">
+                <center>
+                    <ImageView >
+                        <Image url="/img/CharacterButtons/Trump.png" requestedHeight="100" requestedWidth="120" />
+                    </ImageView>
+                </center>
+            </BorderPane>
+
+
+         </children>
+        </Pane>
+    </center>
+    
+</BorderPane>

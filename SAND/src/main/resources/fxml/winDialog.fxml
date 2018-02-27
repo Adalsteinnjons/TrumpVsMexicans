@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<DialogPane minHeight="400" minWidth="400" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.unibas.dmi.cs108.sand.gui.GameController">
+    <content>
+        <BorderPane>
+            <center>
+                <VBox spacing="20" BorderPane.alignment="CENTER">
+                    <Label alignment="CENTER" text="Congrats, you win!" textAlignment="CENTER" textFill="#2482ab" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                  <font>
+                     <Font name="Californian FB" size="27.0" />
+                  </font>
+                  <padding>
+                     <Insets left="80.0" />
+                  </padding></Label>
+               <BorderPane prefHeight="364.0" prefWidth="364.0" style="-fx-background-radius: 5; -fx-padding: 10; -fx-background-color: firebrick;">
+                  <center>
+                          <ImageView style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" BorderPane.alignment="CENTER">
+                              <Image requestedHeight="300" requestedWidth="300" url="/img/Logo.JPG" />
+                          </ImageView>
+                  </center>
+               </BorderPane>
+                </VBox>
+            </center>
+        </BorderPane>
+    </content>
+</DialogPane>

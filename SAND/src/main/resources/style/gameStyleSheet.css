@@ -1,0 +1,40 @@
+.gameButton{
+    -fx-border-color: transparent;
+    -fx-background-color: transparent;
+}
+
+#pane{
+    -fx-background-image: url("/img/WallBackground.png");
+    -fx-background-size: 100%;
+}
+
+
+.gameButton:hover {
+    -fx-border-color: transparent, #18b9d5;
+    -fx-border-width: 2, 2;
+    -fx-border-style: solid;
+    -fx-border-radius: 0, 0;
+    -fx-border-insets: 1 1 1 1, 0;
+}
+
+#chatMessages{
+    -fx-background-color: whitesmoke;
+    -fx-border-color: brown;
+}
+
+.wrapper{
+    -fx-background-color: blanchedalmond;
+    -fx-border-color: coral;
+    -fx-border-width: 2,2;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+}
+
+.wrapper:hover{
+    -fx-background-color: burlywood;
+    -fx-border-width: 2, 2;
+    -fx-border-style: solid;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-border-insets: 1 1 1 1, 0;
+}

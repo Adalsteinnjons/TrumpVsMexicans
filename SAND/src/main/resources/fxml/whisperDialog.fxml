@@ -1,0 +1,17 @@
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+
+<DialogPane fx:controller="ch.unibas.dmi.cs108.sand.gui.WhisperDialogController"
+            xmlns:fx="http://javafx.com/fxml">
+    <headerText>
+        Please input an id of a user:
+    </headerText>
+    <content>
+        <GridPane vgap="10" hgap="10">
+            <Label text="User to whisper:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="userId" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+        </GridPane>
+    </content>
+</DialogPane>

@@ -1,0 +1,50 @@
+#warning{
+    -fx-text-fill: red;
+}
+
+#newGameButton{
+    -fx-background-color:whitesmoke;
+}
+#newGameButton:hover{
+    -fx-background-color: #18b9d5;
+    -fx-text-fill: white;
+}
+
+.menu-bar{
+    -fx-background-color:whitesmoke;
+}
+
+.menu:hover{
+    -fx-background-color: #18b9d5;
+    -fx-text-fill: white;
+}
+
+#textAreaMessages{
+    -fx-background-color: white;
+}
+
+#lobbyMessages{
+    -fx-background-color: white;
+}
+
+#id{
+    -fx-alignment: CENTER;
+}
+
+.wrapper{
+    -fx-background-color: white;
+    -fx-border-color: blanchedalmond;
+    -fx-border-width: 2,2;
+}
+
+.wrapper:hover{
+    -fx-background-color: burlywood;
+    -fx-border-width: 2, 2;
+    -fx-border-style: solid;
+    -fx-border-radius: 0, 0;
+    -fx-border-insets: 1 1 1 1, 0;
+}
+
+.highScoreColumns{
+    -fx-alignment: center;
+}

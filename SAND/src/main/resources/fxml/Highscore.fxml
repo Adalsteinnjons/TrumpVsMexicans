@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane stylesheets="@/style/style.css" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.unibas.dmi.cs108.sand.gui.HighscoreController">
+   <center>
+      <BorderPane prefHeight="500" prefWidth="400" BorderPane.alignment="CENTER">
+          <center>
+              <TableView fx:id="statisticTableView" prefHeight="514.0" prefWidth="425.0">
+                  <columns>
+                      <TableColumn fx:id="name" prefWidth="156.0" styleClass="highScoreColumns" text="Name" />
+                      <TableColumn fx:id="time" prefWidth="243.0" styleClass="highScoreColumns" text="game duration" />
+                      <TableColumn fx:id="timeStamp" prefWidth="243.0" styleClass="highScoreColumns" text="scored" />
+                  </columns>
+              </TableView>
+
+          </center>
+
+      </BorderPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.TextFlow?>
+<?import java.lang.Double?>
+<BorderPane fx:id="pane" stylesheets="@/style/gameStyleSheet.css" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.unibas.dmi.cs108.sand.gui.GameControllerMexican">
+    <fx:define>
+        <Double fx:id="btLayout1" fx:value="750"/>
+        <Double fx:id="btLayout2" fx:value="1050"/>
+        <Double fx:id="chat" fx:value="350"/>
+        <Double fx:id="ButtonYValue" fx:value="690"/>
+    </fx:define>
+    <center>
+        <Pane  minHeight="700.0">
+
+            <children>
+                <ImageView layoutX="150.0" layoutY="40.0">
+                    <Image url="/img/Map5.1.png" requestedHeight="650" requestedWidth="1200" />
+                </ImageView>
+                <ImageView layoutX="25" layoutY="50">
+                    <Image requestedHeight="70" requestedWidth="100" url="/img/Schild.png" />
+                </ImageView>
+                <TextFlow fx:id="money" layoutX="25" layoutY="55" prefHeight="100" prefWidth="100" textAlignment="CENTER" />
+
+                <Button fx:id="bt1" styleClass="gameButton" layoutX="$btLayout2" layoutY="40.0" mnemonicParsing="false" onAction="#buttonRight11" prefHeight="100" prefWidth="100" />
+                <Button fx:id="bt2" styleClass="gameButton" layoutX="$btLayout2" layoutY="150.0" onAction="#buttonRight12" prefHeight="100" prefWidth="100" />
+                <Button fx:id="bt3" styleClass="gameButton" layoutX="$btLayout2" layoutY="260.0" onAction="#buttonRight13" prefHeight="100" prefWidth="100" />
+                <Button fx:id="bt4" styleClass="gameButton" layoutX="$btLayout2" layoutY="370.0" onAction="#buttonRight14" prefHeight="100" prefWidth="100" />
+                <Button fx:id="bt5" styleClass="gameButton" layoutX="$btLayout2" layoutY="480.0" onAction="#buttonRight15" prefHeight="100" prefWidth="100" />
+                <Button fx:id="bt6" styleClass="gameButton" layoutX="$btLayout2" layoutY="590.0" onAction="#buttonRight16" prefHeight="100" prefWidth="100" />
+
+                <!-- In-Game Chat and Character chooser -->
+                <ScrollPane layoutX="$chat" layoutY="$ButtonYValue" prefHeight="155.0" prefWidth="250.0">
+                    <TextFlow fx:id="chatMessages" prefHeight="155.0" prefWidth="250.0">
+                        <padding>
+                            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                        </padding>
+                    </TextFlow>
+                </ScrollPane>
+
+                <TextField fx:id="messageTextField" onAction="#hitEnter" prefHeight="25.0" prefWidth="250.0" layoutX="$chat" layoutY="850"/>
+                <!--<Button onAction="#send" prefWidth="100.0" text="Send" layoutX="1610" layoutY="210"  />-->
+                <Hyperlink onAction="#link" text="www.trumpeltiervssombreros.ch" layoutX="$chat" layoutY="880" />
+
+                <BorderPane onMouseClicked="#donkey" fx:id="donkeyBtn" styleClass="wrapper" layoutX="700" layoutY="$ButtonYValue" minWidth="130" minHeight="130">
+                    <center>
+                        <ImageView >
+                            <Image url="/img/CharacterButtons/Donkey.png" requestedHeight="110" requestedWidth="80" />
+                        </ImageView>
+                    </center>
+                </BorderPane>
+
+                <BorderPane onMouseClicked="#mexican" fx:id="mexBtn" styleClass="wrapper" layoutX="900" layoutY="$ButtonYValue" minWidth="130" minHeight="130">
+                    <center>
+                        <ImageView>
+                            <Image url="/img/CharacterButtons/Mexican.png" requestedHeight="110" requestedWidth="100" />
+                        </ImageView>
+                    </center>
+                </BorderPane>
+
+
+            </children>
+        </Pane>
+    </center>
+
+</BorderPane>
